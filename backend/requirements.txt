@@ -1,11 +1,16 @@
-fastapi
-uvicorn[standard]
-rouge-score
-bert-score
-unbabel-comet
+setuptools<=70.0.0
+
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+rouge-score==0.1.2
+bert-score==0.3.13
+unbabel-comet==2.2.7
+
 torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu
-transformers
-sacrebleu
-pydantic
+transformers==4.38.2
+sacrebleu==2.6.0
+
+pydantic>=2.0.0
 sentencepiece
 protobuf
