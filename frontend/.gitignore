@@ -1,0 +1,23 @@
+.env
+.env.local
+.env.*.local
+node_modules
+dist
+dist-ssr
+*.local
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+.venv
+pip-log.txt
