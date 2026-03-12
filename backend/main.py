@@ -20,11 +20,11 @@ app = FastAPI(title="Multilingual Metric Evaluator API")
 @app.get("/health")
 def health():
     return {"status": "ok"}
-    
+
 # Allow requests from the React frontend (any origin for local dev)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://metric-evaluator.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
