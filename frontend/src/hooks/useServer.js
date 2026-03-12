@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 
-export function useServer(initialUrl = process.env.Backend_URL || "http://localhost:8000") {
+export function useServer(initialUrl = import.meta.env.Backend_URL || "http://localhost:8000") {
   const [serverUrl, setServerUrl] = useState(initialUrl);
   const [serverState, setServerState] = useState("unknown"); // ok | fail | unknown
 
