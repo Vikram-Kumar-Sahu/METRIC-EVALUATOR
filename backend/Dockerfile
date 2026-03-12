@@ -19,12 +19,11 @@ RUN apt-get update && apt-get install -y \
 # Copy requirements first (better caching)
 COPY requirements.txt .
 
-# Upgrade pip
 RUN pip install --upgrade pip
-
-# Install Python dependencies
+RUN pip install setuptools==69.5.1
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN python -c "from comet import download_model; download_model('Unbabel/wmt20-comet-da')"
 # Copy project files
 COPY . .
 
