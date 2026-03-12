@@ -16,6 +16,11 @@ from routes import router
 # Create FastAPI app
 app = FastAPI(title="Multilingual Metric Evaluator API")
 
+# health check endpoint
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+    
 # Allow requests from the React frontend (any origin for local dev)
 app.add_middleware(
     CORSMiddleware,
