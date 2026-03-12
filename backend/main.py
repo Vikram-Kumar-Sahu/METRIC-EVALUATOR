@@ -25,8 +25,9 @@ def health():
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://metric-evaluator.vercel.app"],
-    allow_methods=["GET, POST, PATCH, PUT, DELETE, OPTIONS"],
-    allow_headers=["Access-Control-Allow-Origin", "Content-Type", "Authorization"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Include routes
